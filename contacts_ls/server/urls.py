@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from rest_framework.routers import DefaultRouter
+from retail.views import ContactViewSet
 
-urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-]
+router = DefaultRouter()
+router.register(prefix='contacts', viewset=ChainViewSet)
+
+urlpatterns = router.urls
