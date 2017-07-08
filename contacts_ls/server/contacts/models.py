@@ -5,4 +5,4 @@ class Contact(models.Model):
     """Contact model"""
     name = models.CharField(max_length=30)
     phone_number = PhoneNumberField()
-    
+    image = models.ImageField(upload_to= 'images/', default = 'images/what.png')
