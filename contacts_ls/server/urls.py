@@ -16,9 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from rest_framework.routers import DefaultRouter
-from retail.views import ContactViewSet
+from contacts.views import ContactViewSet
 
 router = DefaultRouter()
-router.register(prefix='contacts', viewset=ChainViewSet)
+router.register(prefix='contacts', viewset=ContactViewSet)
 
 urlpatterns = router.urls
