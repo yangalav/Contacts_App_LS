@@ -5,4 +5,4 @@ class ContactSerializer(serializers.ModelSerializer):
     """Serializer to represent the Contact model """
     class Meta:
         model = Contact
-        fields = ("name","phone_number","image")
+        fields = ("id","name","phone_number","image")

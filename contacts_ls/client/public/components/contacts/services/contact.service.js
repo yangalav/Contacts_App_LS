@@ -1,7 +1,7 @@
 contacts.factory('Contact', function($resource) {
   return $resource(
     'http://localhost:8000/contacts/:id/',
-    {},
+    { id: '@id' },
     {
          'query': {
            method: 'GET',
@@ -17,6 +17,9 @@ contacts.factory('Contact', function($resource) {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
            }
+         },
+         'delete': {
+           method: "DELETE",
          }
     },
     {

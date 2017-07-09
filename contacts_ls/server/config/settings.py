@@ -122,7 +122,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-PHONENUMBER_DB_FORMAT = 'E164'
+PHONENUMBER_DB_FORMAT = 'INTERNATIONAL'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
