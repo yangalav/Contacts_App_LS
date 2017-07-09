@@ -7,12 +7,20 @@ contacts.factory('Contact', function($resource) {
            method: 'GET',
            isArray: true,
            headers: {
-             'Content-Type': 'application/json'
+             'Content-Type': 'application/json',
+           },
+         },
+         'save': {
+           method: "POST",
+           url: 'http://localhost:8000/contacts/:id/',
+           headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
            }
          }
     },
     {
-         stripTrailingSlashes: false
+         stripTrailingSlashes: false,
     }
   );
 });

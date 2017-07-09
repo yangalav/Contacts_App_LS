@@ -1,0 +1,16 @@
+body {
+  background: #EE6E73;
+  color: white;
+}
+
+th {
+  font-size: 17px;
+}
+
+UL {
+  opacity: 0;
+}
+
+#custompink {
+  background: #EF9A9A;
+}

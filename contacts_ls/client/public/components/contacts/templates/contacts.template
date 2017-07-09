@@ -1,11 +1,29 @@
-<div ng-controller="ContactsController">
-  Contacts
-  <div ng-repeat="contact in contacts">
-      <div style="margin-left: 20px;">
-        name : {{ contact.name }} <br/>
-        phone number: {{ contact.phone_number }} <br/>
-        image: {{ contact.image }} <br/>
-        <hr/>
-      </div>
-  </div>
+<div class="container" ng-controller="ContactsController">
+  <h1 class="thin">Contacts</h1>
+
+  <table class="table">
+   <thead>
+      <tr>
+        <th class="thin">Name</th>
+        <th class="thin">Phone Number</th>
+        <th class="thin">Image</th>
+        <th class="thin">&nbsp;</th>
+      </tr>
+    </thead
+
+    <tbody>
+      <tr>
+        <td><input class="form-control" ng-model="contact.name"></td>
+        <td><input class="form-control" ng-model="contact.phone_number"></td>
+        <td><input class="form-control" ng-model="contact.image"></td>
+        <td><button href="#!" id="custompink" class="btn-floating btn-small waves-effect waves-light" type="submit" name="action" ng-click="addContact(); goToBottom();"><i class="material-icons">add</i></a></td>
+        <td><a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a></td>
+      </tr>
+      <tr ng-repeat="contact in contactlist">
+           <UL>{{ contact.name }}</UL>
+           <td>{{ contact.phone_number }}</td>
+           <td>{{ contact.image }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
