@@ -1,5 +1,11 @@
 <div ng-controller="ContactsController">
-  <div>
-    {{ message }}
+  Contacts
+  <div ng-repeat="contact in contacts">
+      <div style="margin-left: 20px;">
+        name : {{ contact.name }} <br/>
+        phone number: {{ contact.phone_number }} <br/>
+        image: {{ contact.image }} <br/>
+        <hr/>
+      </div>
   </div>
 </div>

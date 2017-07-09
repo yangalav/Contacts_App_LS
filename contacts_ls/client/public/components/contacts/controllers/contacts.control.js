@@ -1,3 +1,5 @@
-contacts.controller('ContactsController', ['$scope', function($scope) {
-  $scope.message = "Hello World";
+contacts.controller('ContactsController', ['$scope', function($scope, Contact) {
+  Contact.query().$promise.then(function(data) {
+    $scope.contacts = data;
+  });
 }]);
