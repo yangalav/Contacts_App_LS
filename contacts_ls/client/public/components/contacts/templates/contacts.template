@@ -2,6 +2,14 @@
   <h1 class="thin">Contacts</h1>
 
   <table class="table">
+
+    <form>
+      <div class="input-field">
+        <input id="search" type="search" ng-model="query" required>
+        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+      </div>
+    </form>
+
    <thead>
       <tr>
         <th class="thin">Name</th>
@@ -18,7 +26,7 @@
         <td><input class="form-control" ng-model="contact.image"></td>
         <td><button id="custompink" class="btn-floating btn-small waves-effect waves-light" type="submit" name="action" ng-click="addContact(); goToBottom();"><i class="material-icons">add</i></a></td
       </tr>
-      <tr ng-repeat="contact in contactlist">
+      <tr ng-repeat="contact in contactlist | filter:query">
            <td>{{ contact.name }}</td>
            <td>{{ contact.phone_number }}</td>
            <td>{{ contact.image }}</td>
