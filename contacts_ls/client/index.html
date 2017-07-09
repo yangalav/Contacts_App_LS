@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ContactsApp">
   <head>
     <meta charset='utf-8'>
     <title>Dem Contactz</title>
@@ -7,10 +7,12 @@
     <!-- Angular Setup -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
 
     <!-- Application Setup -->
     <script src="public/appRoutes.js"></script>
     <script src="public/app.js"></script>
+    <script src="public/components/contacts/services/contact.service.js"></script>
 
     <!-- Controllers -->
     <script src="public/components/contacts/controllers/contacts.control.js"></script>

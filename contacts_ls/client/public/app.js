@@ -1,8 +1,9 @@
 'use strict';
 
-var retail = angular.module("contacts", []);
+var contacts = angular.module("contacts", []);
 
 angular.module('ContactsApp', [
   'appRoutes',
-  'contacts'
+  'contacts',
+  'ngResource'
 ]);
