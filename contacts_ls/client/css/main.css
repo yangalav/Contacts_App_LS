@@ -14,3 +14,7 @@ UL {
 #custompink {
   background: #EF9A9A;
 }
+
+#bottomwhite {
+  border-bottom: white !important;
+}

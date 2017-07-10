@@ -20,6 +20,14 @@ contacts.factory('Contact', function($resource) {
          },
          'delete': {
            method: "DELETE",
+         },
+         'update': {
+           method: 'PUT',
+           url: 'http://localhost:8000/contacts/:id/',
+           headers: {
+             'Accept': 'application/json',
+             'Content-Type': 'application/json',
+           },
          }
     },
     {

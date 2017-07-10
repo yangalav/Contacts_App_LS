@@ -18,6 +18,16 @@ class ContactViewSet(viewsets.ModelViewSet):
         return Response({'detail': 'Contact created'})
 
     def delete_person(self, request, pk, format=None):
-        queryset = Contacts.objects.all.get(pk=pk)
+        queryset = Contact.objects.all.get(pk=pk)
+        print("baked potato " + queryset);
         queryset.delete()
         return Response({'detail': 'Contact deleted'})
+
+    def update_person(self, request, pk, format=None):
+        print("cheese and crackers");
+        queryset = Contact.objects.all.get(pk=pk)
+        serializer= ContactSerializer(queryset, data=request.data)
+        contact = Contact(name=request.data['name'],phone_number=request.data['phone_number'],image='/images/what.png')
+        contact.save()
+        return redirect('/')
+        return Response({'detail': 'Contact edited'})

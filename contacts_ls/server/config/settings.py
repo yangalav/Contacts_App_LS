@@ -14,7 +14,10 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MEDIA_URL = '/images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '/contacts/images')
 
+print(MEDIA_ROOT)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -56,6 +59,15 @@ MIDDLEWARE = [
 CORS_ORIGIN_WHITELIST = (
 'localhost:8080',
 '127.0.0.1:8000',
+)
+
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
 )
 
 ROOT_URLCONF = 'urls'
