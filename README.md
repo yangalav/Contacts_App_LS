@@ -1,7 +1,7 @@
 # Contacts App
 
 This application uses the scalable Django web framework, along with the Django Restful Framework to create and store contact information in a list.
-The user is able to enter a contact's name and phone number, and filter them using AngularJS directives on the front-end. 
+The user is able to enter a contact's name and phone number, and filter them using AngularJS directives on the front-end.
 The user can also enjoy a pleasing, responsive interface built using the modern front-end framework Materialize.
 
 1. [Installing](#installation)
@@ -29,7 +29,7 @@ $ activate env_name *Windows
 
 Navigate to the application directory(contacts_app) and enter:
 ```
-$ pip install -r requirements.txt
+$ pip install -r server/equirements.txt
 $ cd client
 $ npm install
 $ bower install
