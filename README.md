@@ -29,7 +29,7 @@ $ activate env_name *Windows
 
 Navigate to the application directory(contacts_ls) and enter:
 ```
-$ pip install -r requirements.txt
+$ pip install -r server/requirements.txt
 $ cd client
 $ npm install
 $ bower install
