@@ -27,9 +27,9 @@ $ source activate env_name *MacOS
 $ activate env_name *Windows
 ```
 
-Navigate to the application directory(contacts_app) and enter:
+Navigate to the application directory(contacts_ls) and enter:
 ```
-$ pip install -r server/equirements.txt
+$ pip install -r server/requirements.txt
 $ cd client
 $ npm install
 $ bower install
