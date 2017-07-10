@@ -16,7 +16,7 @@
 
   $scope.addContact = function() {
       if($scope.contact.id == undefined){
-        console.log('makin post requesttt, here is the dataaaa ' + JSON.stringify($scope.contact));
+        console.log('Making post request ' + JSON.stringify($scope.contact));
         var numberIsValid = 1;
         var nums = '0123456789';
         var number = $scope.contact.phone_number.substring(1, $scope.contact.phone_number.length);
@@ -30,7 +30,7 @@
 
         if($scope.contact.phone_number.length <= 16 && $scope.contact.phone_number.length >= 12 && $scope.contact.phone_number[0] == '+' && numberIsValid == 1){
           Contact.save({}, $scope.contact).$promise.then(function(data) {
-            console.log('dis our data ' + data);
+            console.log('this is our addContact ' + data);
             refresh();
           });
         } else {
@@ -42,7 +42,7 @@
   }
 
   $scope.deleteContact = function(contact){
-    console.log('we tryna delete ', JSON.stringify(contact.id))
+    console.log('trying to delete ', JSON.stringify(contact.id))
     Contact.delete({ 'id': contact.id }).$promise.then(function(data) {
       refresh();
     });
@@ -54,14 +54,14 @@
   }
 
   $scope.editContact = function(contact){
-    console.log('hahahahahahhahahahahahahahahahahahaha', contact.id)
+    console.log('this is the editContact contact id ', contact.id)
     $scope.contact = contact;
   }
 
   $scope.updateContact = function(contact){
-    console.log("HELO", { 'id': contact.id })
+    console.log("Here is the updateContact contact id", { 'id': contact.id })
     Contact.update({ 'id': contact.id }, { 'name': contact.name, 'phone_number': contact.phone_number, 'image': contact.image }).$promise.then(function(data){
-      console.log('lol updated')
+      console.log('updated')
       refresh();
     });
   }
