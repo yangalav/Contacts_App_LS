@@ -36,7 +36,7 @@ $ bower install
 $ cd .. #Return to application directory
 ```
 
-Then we then need to start our Django Server:
+We then need to start our Django Server:
 ```
 $ python server/manage.py runserver
 ```
