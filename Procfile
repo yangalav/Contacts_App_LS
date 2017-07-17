@@ -1,1 +1,1 @@
-web: gunicorn contacts_ls.wsgi:app --log-file -
+web: gunicorn contacts_ls.server.config.wsgi:app --log-file - --log-level debug
